@@ -1,0 +1,8 @@
+pipeline:
+
+  build:
+    image: gradle:5.5.1-jdk8
+    environment:
+      GRADLE_OPTS: -Dorg.gradle.daemon=false
+    commands:
+      - gradle build
