@@ -2,9 +2,9 @@ package com.github.viktorbll.main
 
 import kotlinx.atomicfu.*
 
-val atomint = atomic(0)
+private val _atomint = atomic(0)
 
 fun main() {
-    atomint.incrementAndGet()
-    println("Hi atomic, $atomint")
+    _atomint.incrementAndGet()
+    println("Hi atomic, ${_atomint.value}")
 }
