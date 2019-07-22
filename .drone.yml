@@ -9,7 +9,7 @@ pipeline:
   publish:
     image: plugins/github-release
     files:
-      - build/classes/kotlin/native/main/kotlin-mf-starter.klib
+      - build/libs/kotlin-mf-starter-jvm-*.jar
     checksum:
       - sha256
     secrets: [github_token]
