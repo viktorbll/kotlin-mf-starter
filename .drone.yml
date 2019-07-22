@@ -6,3 +6,12 @@ pipeline:
       GRADLE_OPTS: -Dorg.gradle.daemon=false
     commands:
       - gradle build
+  publish:
+    image: plugins/github-release
+    files:
+      - build/classes/kotlin/native/main/kotlin-mf-starter.klib
+    checksum:
+      - sha256
+    secrets: [github_token]
+    when:
+      event: tag
